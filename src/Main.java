@@ -1,6 +1,17 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        IndexSearch search = new IndexSearch();
-        assert search.indexOf(new int[]{1, 2, 4, 4, 5, 4, 9, 8, 11, 13, 0}, 4, 3, 7) == 6;
+        Scanner scanner = new Scanner(System.in);
+        int month = scanner.nextInt();
+
+        switch (month) {
+            case 12, 1, 2 -> System.out.println("зима");
+            case 3, 4, 5 -> System.out.println("весна");
+            case 6, 7, 8 -> System.out.println("лето");
+            case 9, 10, 11 -> System.out.println("лето");
+            default -> System.out.println("Недопустимое значение для номера месяца");
+        }
     }
+
 }
